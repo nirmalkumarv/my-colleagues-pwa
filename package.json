@@ -1,0 +1,14 @@
+{ 
+   "name": "my-colleagues-pwa", 
+   "version": "1.0.0", 
+   "description": "A Simple PWA Application for viewing Colleague Information", 
+   "scripts": { 
+     "lite": "lite-server –port 10001", 
+     "start": "npm run lite" 
+   }, 
+   "author": "", 
+   "license": "ISC", 
+   "devDependencies": { 
+     "lite-server": "^1.3.1" 
+   } 
+}
