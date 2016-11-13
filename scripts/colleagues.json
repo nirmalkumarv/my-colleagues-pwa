@@ -1,12 +1,290 @@
 [
-    {
-        "name": "Atul",
-        "extn": "201",
-        "skypeId": "atulk"
-    },
-    {
-        "name": "Solomon",
-        "extn": "201",
-        "skypeId": "solomon"
-    },
+  {
+    "extn":215,
+    "name":"Giby"
+  },
+  {
+    "extn":296,
+    "name":"Vinoth"
+  },
+  {
+    "extn":265,
+    "name":"Sathish/Karthick Ram"
+  },
+  {
+    "extn":261,
+    "name":"Bhoopathi"
+  },
+  {
+    "extn":287,
+    "name":"Karthick Ramu/Sairam"
+  },
+  {
+    "extn":214,
+    "name":"Ram Mohan/Monica"
+  },
+  {
+    "extn":216,
+    "name":"Aswin R/Yellesh"
+  },
+  {
+    "extn":217,
+    "name":"Krishna Kumari"
+  },
+  {
+    "extn":248,
+    "name":"Hari"
+  },
+  {
+    "extn":249,
+    "name":"Pinaki"
+  },
+  {
+    "extn":205,
+    "name":"Kowsalya"
+  },
+  {
+    "extn":211,
+    "name":"Nasar/Meena Grace"
+  },
+  {
+    "extn":297,
+    "name":"Deepak Kumar/ Atul Kumar"
+  },
+  {
+    "extn":239,
+    "name":"Madhan"
+  },
+  {
+    "extn":219,
+    "name":"Surendhar"
+  },
+  {
+    "extn":264,
+    "name":"Vignesh/Fariduddin"
+  },
+  {
+    "extn":236,
+    "name":"Dharma/Rama Chandran"
+  },
+  {
+    "extn":237,
+    "name":"Karthickeyan"
+  },
+  {
+    "extn":238,
+    "name":"Muneesh"
+  },
+  {
+    "extn":208,
+    "name":"Pradeep"
+  },
+  {
+    "extn":295,
+    "name":"Nirmal"
+  },
+  {
+    "extn":233,
+    "name":"Sheik "
+  },
+  {
+    "extn":266,
+    "name":"Sethu/Sarfaraz/Praveen/Umashree/Manoshree/Jayasri"
+  },
+  {
+    "extn":263,
+    "name":"Janeeval/Krishnavijay"
+  },
+  {
+    "extn":262,
+    "name":"Suresh/Namrata"
+  },
+  {
+    "extn":260,
+    "name":"Nimisha/Swathi"
+  },
+  {
+    "extn":259,
+    "name":"Balaji/Das Prakash"
+  },
+  {
+    "extn":258,
+    "name":"Elavarasi/Abirami"
+  },
+  {
+    "extn":257,
+    "name":"Kiruthigaa/Deepak Yadav/\nSelvaraj/Vinoth Kumar"
+  },
+  {
+    "extn":256,
+    "name":"Partha/Lalith"
+  },
+  {
+    "extn":254,
+    "name":"Meena/Vasundhara/Vignesh"
+  },
+  {
+    "extn":250,
+    "name":"Niki/Yashwanth/Mudit"
+  },
+  {
+    "extn":253,
+    "name":"Vamsi"
+  },
+  {
+    "extn":230,
+    "name":"Ecops"
+  },
+  {
+    "extn":242,
+    "name":"Karthick A"
+  },
+  {
+    "extn":218,
+    "name":"Mohan/Ashwin"
+  },
+  {
+    "extn":203,
+    "name":"Krish"
+  },
+  {
+    "extn":228,
+    "name":"Charles"
+  },
+  {
+    "extn":244,
+    "name":"Kevin"
+  },
+  {
+    "extn":204,
+    "name":"Martin"
+  },
+  {
+    "extn":234,
+    "name":"Steve"
+  },
+  {
+    "extn":206,
+    "name":"Kannan"
+  },
+  {
+    "extn":220,
+    "name":"Timothy Alban G/Karthick N"
+  },
+  {
+    "extn":202,
+    "name":"Prakash Mani"
+  },
+  {
+    "extn":299,
+    "name":"Abdul"
+  },
+  {
+    "extn":207,
+    "name":"Prakash R/Rajasekar"
+  },
+  {
+    "extn":235,
+    "name":"Karthicka"
+  },
+  {
+    "extn":243,
+    "name":"Rajeswari"
+  },
+  {
+    "extn":293,
+    "name":"Naresh "
+  },
+  {
+    "extn":276,
+    "name":"Manoj"
+  },
+  {
+    "extn":209,
+    "name":"Conference"
+  },
+  {
+    "extn":227,
+    "name":"Meeting Room - 2"
+  },
+  {
+    "extn":229,
+    "name":"Meeting Room - 1"
+  },
+  {
+    "extn":288,
+    "name":"Cabin-2"
+  },
+  {
+    "extn":221,
+    "name":"Discussion Room"
+  },
+  {
+    "extn":225,
+    "name":"Cabin-5"
+  },
+  {
+    "extn":286,
+    "name":"Babu"
+  },
+  {
+    "extn":285,
+    "name":"Amarnath"
+  },
+  {
+    "extn":281,
+    "name":"Suresh/Dinesh Kumar"
+  },
+  {
+    "extn":279,
+    "name":"Ganesh"
+  },
+  {
+    "extn":278,
+    "name":"Subramanian"
+  },
+  {
+    "extn":277,
+    "name":"Saranya"
+  },
+  {
+    "extn":294,
+    "name":"Elango"
+  },
+  {
+    "extn":275,
+    "name":"Mahesh"
+  },
+  {
+    "extn":247,
+    "name":"John Paul"
+  },
+  {
+    "extn":274,
+    "name":"Thilak Anand"
+  },
+  {
+    "extn":273,
+    "name":"Dhanalakshmi"
+  },
+  {
+    "extn":272,
+    "name":"Padhamanathan"
+  },
+  {
+    "extn":271,
+    "name":"Raghavendra"
+  },
+  {
+    "extn":270,
+    "name":"Vijaya Bharathi"
+  },
+  {
+    "extn":269,
+    "name":"Elumalai"
+  },
+  {
+    "extn":268,
+    "name":"Shiva"
+  }
 ]

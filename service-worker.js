@@ -12,26 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-var dataCacheName = 'weatherData-v1';
-var cacheName = 'weatherPWA-final-1';
+var dataCacheName = 'searchColleagueData-v1';
+var cacheName = 'searchColleaguePWA-final-1';
 var filesToCache = [
   '/',
   '/index.html',
   '/scripts/app.js',
-  '/styles/inline.css',
-  '/images/clear.png',
-  '/images/cloudy-scattered-showers.png',
-  '/images/cloudy.png',
-  '/images/fog.png',
+  '/scripts/awesomplete.js',
+  '/json/colleagues.js',
   '/images/ic_add_white_24px.svg',
   '/images/ic_refresh_white_24px.svg',
-  '/images/partly-cloudy.png',
-  '/images/rain.png',
-  '/images/scattered-showers.png',
-  '/images/sleet.png',
-  '/images/snow.png',
-  '/images/thunderstorm.png',
-  '/images/wind.png'
+  '/images/skype.svg',
+  '/images/phone.svg',
+  '/images/birthday.svg'
 ];
 
 self.addEventListener('install', function(e) {
