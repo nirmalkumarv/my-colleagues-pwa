@@ -527,4 +527,10 @@ body {
   border-radius: 3px;
   padding: 5px 10px;
 }
+.zero-state
+{
+  text-align: center;
+  color: #444;
+  font-size: 1.1em;
+}
 /*# sourceMappingURL=awesomplete.css.map */

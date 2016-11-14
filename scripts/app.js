@@ -16,6 +16,7 @@
 (function() {
   'use strict';
 
+  //App - initiating
   var app = {
     isLoading: true,
     visibleCards: {},
@@ -23,7 +24,8 @@
     spinner: document.querySelector('.loader'),
     cardTemplate: document.querySelector('.cardTemplate'),
     container: document.querySelector('.main'),
-    addDialog: document.querySelector('.dialog-container')
+    addDialog: document.querySelector('.dialog-container'),
+    zerostate: document.querySelector('.zero-state'),
   };
 
 
@@ -34,12 +36,14 @@
    ****************************************************************************/
 
 
+  //Show pop on clicking + button
   document.getElementById('butAdd').addEventListener('click', function() {
     // Open/show the add new city dialog
     app.toggleAddDialog(true);
   });
 
-  document.getElementById('butAddCity').addEventListener('click', function() {
+  //Add colleague on clicking Add button in popup
+  document.getElementById('butAddColleague').addEventListener('click', function() {
     // Add the newly selected city
     var selectInput = document.getElementById('searchName');
     var key = selectInput.value;
@@ -47,16 +51,18 @@
     {
       return e.name == key;
     });
-
+    if(!selectedColleague)
+      return;
     if (!app.selectedColleagues) {
       app.selectedColleagues = [];
     }
-    app.updateColleagueCard(selectedColleague);
-    app.selectedColleagues.push(selectedColleague);
-    app.saveSelectedColleagues();
-    app.toggleAddDialog(false);
+    app.updateColleagueCard(selectedColleague);//update the card
+    app.selectedColleagues.push(selectedColleague);//add the item to app colleague list
+    app.saveSelectedColleagues();//storing the colleague to local storage
+    app.toggleAddDialog(false);//hide the pop up
   });
 
+  //hides the popup on clicking cancel
   document.getElementById('butAddCancel').addEventListener('click', function() {
     // Close the add new city dialog
     app.toggleAddDialog(false);
@@ -69,7 +75,7 @@
    *
    ****************************************************************************/
 
-  // Toggles the visibility of the add new city dialog.
+  // Toggles the visibility of the add new colleague dialog.
   app.toggleAddDialog = function(visible) {
     document.getElementById('searchName').value = "";
     if (visible) {
@@ -79,28 +85,28 @@
     }
   };
 
-  // Updates a weather card with the latest weather forecast. If the card
+  // Updates a colleague card with the latest info. If the card
   // doesn't already exist, it's cloned from the template.
   app.updateColleagueCard = function(data) {
 
-    var card = app.visibleCards[data.id];
+    var card = app.visibleCards[data.extn];
     if (!card) {
       card = app.cardTemplate.cloneNode(true);
       card.classList.remove('cardTemplate');
-      card.querySelector('.name').textContent = data.name;
-      card.querySelector('.birthday').textContent = data.birthday;
-      card.querySelector('.skypeId').textContent = data.skypeId;
-      card.querySelector('.ext').textContent = data.extn;
+      card.querySelector('.name').textContent = data.name  || 'NA';
+      card.querySelector('.birthday').textContent = data.birthday || 'NA';
+      card.querySelector('.skypeId').textContent = data.skypeId  || 'NA';
+      card.querySelector('.ext').textContent = data.extn  || 'NA';
       card.removeAttribute('hidden');
       app.container.appendChild(card);
-      app.visibleCards[data.id] = card;
+      app.visibleCards[data.extn] = card;
     }
-
     if (app.isLoading) {
       app.spinner.setAttribute('hidden', true);
       app.container.removeAttribute('hidden');
       app.isLoading = false;
     }
+    app.zerostate.setAttribute('hidden', true);
   };
 
 
@@ -121,15 +127,14 @@
     localStorage.selectedColleagues = selectedColleagues;
   };
 
-
+  //get the colleague list to initiate the auto complete
   app.getColleaguesList = function()
   {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() {
       if (request.readyState === XMLHttpRequest.DONE) {
         if (request.status === 200) {
-          var response = JSON.parse(request.response);
-          var results = response.data;
+          var results = JSON.parse(request.response);
           app.colleagueList = results;
           var list = [];
           for(var i=0;i<results.length;i++)
@@ -141,24 +146,11 @@
         }
       }
     };
-    request.open('GET', '../json/colleagues.json');
+    request.open('GET', '../scripts/colleagues.json');
     request.send();
   };
 
-
-  /*
-   * Fake weather data that is presented when the user first uses the app,
-   */
-  var initialColleague = {
-     "name": "Atul",
-      "extn": "201",
-      "skypeId": "atulk",
-      "id":"1",
-      "birthday":"Oct 23"
-  };
-
-
-  // TODO add startup code here
+  // app startup code
   app.selectedColleagues = localStorage.selectedColleagues;
   if (app.selectedColleagues) {
     app.selectedColleagues = JSON.parse(app.selectedColleagues);
@@ -167,17 +159,17 @@
     });
   } else {
     /* The user is using the app for the first time*/
-    app.updateColleagueCard(initialColleague);
-    app.selectedColleagues = [initialColleague];
-    app.saveSelectedColleagues();
+    app.zerostate.removeAttribute('hidden');
+    if (app.isLoading) {
+      app.spinner.setAttribute('hidden', true);
+      app.container.removeAttribute('hidden');
+      app.isLoading = false;
+    }
   }
   app.getColleaguesList();
 
 
-
-
-
-  // TODO add service worker code here
+  //app service worker code
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
              .register('./service-worker.js')

@@ -45,10 +45,6 @@
     <div class="card cardTemplate weather-forecast" hidden>
       <div class="name"></div>
       <div class="row">
-        <img src="images/birthday.png" height="18" width="18">
-        <span class="birthday"></span>
-      </div>
-      <div class="row">
         <img src="images/phone.png" height="18" width="18">
         <span class="ext"></span>
       </div>
@@ -56,6 +52,13 @@
         <img src="images/skype.png" height="18" width="18">
         <span class="skypeId"></span>
       </div>
+      <div class="row">
+        <img src="images/birthday.png" height="18" width="18">
+        <span class="birthday"></span>
+      </div>
+    </div>
+    <div class="card zero-state weather-forecast" id = "no-colleague" hidden>
+      Please click '+' to add your colleague
     </div>
   </main>
 
@@ -66,7 +69,7 @@
         <input id="searchName" data-minchars = 1/>
       </div>
       <div class="dialog-buttons">
-        <button id="butAddCity" class="button">Add</button>
+        <button id="butAddColleague" class="button">Add</button>
         <button id="butAddCancel" class="button">Cancel</button>
       </div>
     </div>
