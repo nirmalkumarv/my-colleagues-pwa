@@ -18,6 +18,7 @@ var filesToCache = [
   '/',
   '/index.html',
   '/scripts/app.js',
+  '/styles/inline.css',
   '/scripts/awesomplete.js',
   '/scripts/colleagues.json',
   '/images/ic_add_white_24px.svg',
